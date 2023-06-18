@@ -23,6 +23,7 @@ const Users =()=> {
             {usersStatus === 'ok' && users && users.length > 0 && <>
             {users.map(user => (
                 <UserCard 
+                    key={user.id}
                     user={user} 
                     onUserDelete={(id)=> dispatch({type:'DELETE_USER', payload: id})}
                 />
