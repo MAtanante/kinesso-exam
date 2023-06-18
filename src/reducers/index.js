@@ -30,6 +30,15 @@ const rootReducer = (state = initState, action)=> {
         }
     }
 
+    if(action.type === 'DELETE_USER') {
+        const newUsers = state.users.filter(user => user.id !== action.payload)
+
+        return {
+            ...state,
+            users: newUsers
+        }
+    }
+
     return state
 }
 
