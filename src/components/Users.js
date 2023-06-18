@@ -20,6 +20,7 @@ const Users =()=> {
         <div className='flex justify-center'>
         <div className='flex flex-wrap'>
             {usersStatus === 'loading' &&  <div>Loading</div>}
+            {usersStatus === 'error' &&  <div>Something went wrong</div>}
             {usersStatus === 'ok' && users && users.length > 0 && <>
             {users.map(user => (
                 <UserCard 
